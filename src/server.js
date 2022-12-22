@@ -13,7 +13,7 @@ async function lanchServer() {
     app.use(express.urlencoded({extended: true}));
 
     app.get('/',(req,res)=>{
-        res.render('index.twig',{user: '김세현'});
+        res.render('index.twig',{user: 'keywords'});
     })
     app.get('/api/posts', myController.getPostAll);
     // app.set('/api/posts', myController.setPost());
