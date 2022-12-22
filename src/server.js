@@ -9,11 +9,11 @@ async function lanchServer() {
         autoescape: true,
         express: app
     });
-    // app.use(express.json());
-    // app.use(express.urlencoded({extended: true}));
+    app.use(express.json());
+    app.use(express.urlencoded({extended: true}));
 
     app.get('/',(req,res)=>{
-        res.render('index.html',{user: '김세현'});
+        res.render('index.twig',{user: '김세현'});
     })
     app.get('/api/posts', myController.getPostAll);
     // app.set('/api/posts', myController.setPost());

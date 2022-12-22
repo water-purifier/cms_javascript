@@ -16,6 +16,6 @@ export async function getPostAll(req, res) {
 export async function getUserAll(req, res) {
     // const users = await sequelize.query("SELECT * FROM `users`", { type: QueryTypes.SELECT });
     const users = await User.findAll();
-    res.render('users.html', {users: users});
+    res.render('users.twig', {users: users});
 }
 
