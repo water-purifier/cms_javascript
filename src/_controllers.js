@@ -1,5 +1,4 @@
 import {Post, User, QueryTypes, sequelize} from "./_models.js";
-import nunjucks from "nunjucks";
 
 export async function setPost(req, res) {
     const post = await Post.create(
@@ -19,3 +18,10 @@ export async function getUserAll(req, res) {
     res.render('users.twig', {users: users});
 }
 
+export async function login(req,res){
+    res.render('login.twig');
+}
+
+export async function register(req,res){
+    res.render('register.twig');
+}
